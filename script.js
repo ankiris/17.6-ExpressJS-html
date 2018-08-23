@@ -14,10 +14,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/auth/google', function (req, res) {
-    res.render('google', {
-        firstName: req.query.firstName,
-        lastName: req.query.lastName
-    });
+    res.render('google');
 });
 
 
