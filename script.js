@@ -10,16 +10,16 @@ app.use(function(req, res, next){
 });
 
 app.get('/', function (req, res) {
-    res.send('Hello World');
-});
-
-app.get('/store', function (req, res) {
-    res.send('Sklep');
-});
-
-app.get('/first-template', function(req, res){
     res.render('first-template');
 });
+
+app.get('/auth/google', function (req, res) {
+    res.render('google', {
+        firstName: req.query.firstName,
+        lastName: req.query.lastName
+    });
+});
+
 
 
 app.listen(3000)
