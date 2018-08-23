@@ -4,4 +4,11 @@ html
         title="Main page with login"
     body
         p.greetings#people Welcome to the login page
-        a(href="/auth/google") Sign in
+
+        p first name
+        input(type='text' name='firstName')
+
+        p second name
+        input(type='text' name='lastName')
+
+        a.button(href="/auth/google") Sign in
